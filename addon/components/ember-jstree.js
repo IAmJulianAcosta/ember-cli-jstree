@@ -213,7 +213,7 @@ export default Ember.Component.extend(InboundActions, EmberJstreeActions, {
           triggered after all events are bound
         */
         treeObject.on('init.jstree', () => {
-            Ember.run(this, function() {
+            Ember.run.schedule(this, function() {
                 if (this.get('isDestroyed') || this.get('isDestroying')) {
                     return;
                 }
@@ -227,7 +227,7 @@ export default Ember.Component.extend(InboundActions, EmberJstreeActions, {
           triggered after all nodes are finished loading
         */
         treeObject.on('ready.jstree', () => {
-            Ember.run(this, function() {
+            Ember.run.schedule(this, function() {
                 if (this.get('isDestroyed') || this.get('isDestroying')) {
                     return;
                 }
@@ -242,7 +242,7 @@ export default Ember.Component.extend(InboundActions, EmberJstreeActions, {
           triggered after nodes are redrawn
         */
         treeObject.on('redraw.jstree', () => {
-            Ember.run(this, function() {
+            Ember.run.schedule(this, function() {
                 if (this.get('isDestroyed') || this.get('isDestroying')) {
                     return;
                 }
@@ -256,7 +256,7 @@ export default Ember.Component.extend(InboundActions, EmberJstreeActions, {
           triggered when a node is opened and the animation is complete
         */
         treeObject.on('after_open.jstree', (event, data) => {
-            Ember.run(this, function() {
+            Ember.run.schedule(this, function() {
                 if (this.get('isDestroyed') || this.get('isDestroying')) {
                     return;
                 }
@@ -270,7 +270,7 @@ export default Ember.Component.extend(InboundActions, EmberJstreeActions, {
           triggered when a node is closed and the animation is complete
         */
         treeObject.on('after_close.jstree', (event, data) => {
-            Ember.run(this, function() {
+            Ember.run.schedule(this, function() {
                 if (this.get('isDestroyed') || this.get('isDestroying')) {
                     return;
                 }
@@ -284,7 +284,7 @@ export default Ember.Component.extend(InboundActions, EmberJstreeActions, {
           triggered when an node is selected
         */
         treeObject.on('select_node.jstree', (event, data) => {
-            Ember.run(this, function() {
+            Ember.run.schedule(this, function() {
                 if (this.get('isDestroyed') || this.get('isDestroying')) {
                     return;
                 }
@@ -298,7 +298,7 @@ export default Ember.Component.extend(InboundActions, EmberJstreeActions, {
           triggered when an node is deselected
         */
         treeObject.on('deselect_node.jstree', (event, data) => {
-            Ember.run(this, function() {
+            Ember.run.schedule(this, function() {
                 if (this.get('isDestroyed') || this.get('isDestroying')) {
                     return;
                 }
@@ -312,7 +312,7 @@ export default Ember.Component.extend(InboundActions, EmberJstreeActions, {
           triggered when selection changes
         */
         treeObject.on('changed.jstree', (event, data) => {
-            Ember.run(this, function() {
+            Ember.run.schedule(this, function() {
                 if (this.get('isDestroyed') || this.get('isDestroying')) {
                     return;
                 }
@@ -336,7 +336,7 @@ export default Ember.Component.extend(InboundActions, EmberJstreeActions, {
           triggered when a node is hovered
         */
         treeObject.on('hover_node.jstree', (event, data) => {
-            Ember.run(this, function() {
+            Ember.run.schedule(this, function() {
                 if (this.get('isDestroyed') || this.get('isDestroying')) {
                     return;
                 }
@@ -350,7 +350,7 @@ export default Ember.Component.extend(InboundActions, EmberJstreeActions, {
           triggered when a node is no longer hovered
         */
         treeObject.on('dehover_node.jstree', (event, data) => {
-            Ember.run(this, function() {
+            Ember.run.schedule(this, function() {
                 if (this.get('isDestroyed') || this.get('isDestroying')) {
                     return;
                 }
@@ -378,7 +378,7 @@ export default Ember.Component.extend(InboundActions, EmberJstreeActions, {
           triggered when a node is moved
         */
         treeObject.on('move_node.jstree', (event, data) => {
-            Ember.run(this, function() {
+            Ember.run.schedule(this, function() {
                 if (this.get('isDestroyed') || this.get('isDestroying')) {
                     return;
                 }
