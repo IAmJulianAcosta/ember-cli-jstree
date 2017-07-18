@@ -364,7 +364,7 @@ export default Ember.Component.extend(InboundActions, EmberJstreeActions, {
           triggered when a node is no longer hovered
         */
         treeObject.on('show_node.jstree', (event, data) => {
-            Ember.run(this, function() {
+            Ember.run.schedule('afterRender', this, function() {
                 if (this.get('isDestroyed') || this.get('isDestroying')) {
                     return;
                 }
